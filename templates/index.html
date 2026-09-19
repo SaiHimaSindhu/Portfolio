@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Hima Sindhu</title>
+<meta name="description" content="Portfolio of Sai Hima Sindhu — Software Engineer, Software Developer, and Python Developer.">
+
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/profile.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/profile.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/profile.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/profile.png') }}">
+
+<!-- Google Font: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__logo">Sai Hima Sindhu</a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#skills" class="nav-link">Technical Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#internship" class="nav-link">Internship</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+
+      <a href="{{ url_for('download_resume') }}" class="btn btn--primary navbar__resume navbar__resume--mobile">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Resume</span>
+      </a>
+    </nav>
+
+    <a href="{{ url_for('download_resume') }}" class="btn btn--primary navbar__resume navbar__resume--desktop">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Resume</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="hero__ring hero__ring--1"></span>
+      <span class="hero__ring hero__ring--2"></span>
+      <span class="hero__dots"></span>
+      <span class="hero__glow"></span>
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Sai Hima Sindhu</h1>
+          <p class="hero__typing">
+            <span id="typingText"></span><span class="cursor">|</span>
+          </p>
+
+          <div class="hero__socials">
+            <a href="https://github.com/saihimasindhu" target="_blank" rel="noopener" aria-label="GitHub" class="hero__social-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sai-hima-sindhu-kancherla-962531316" target="_blank" rel="noopener" aria-label="LinkedIn" class="hero__social-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 10.5v6M7.5 7.75v.01M11.5 16.5v-3.6c0-1.2.9-2.1 2-2.1s2 .9 2 2.1v3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+            <a href="mailto:sindhukancherla2003@gmail.com" aria-label="Email" class="hero__social-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 6 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__illustration">
+          <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Developer workspace with a laptop, books, and a small plant">
+            <!-- desk -->
+            <rect x="20" y="330" width="480" height="26" rx="6" fill="#3B2A1E"/>
+            <rect x="20" y="356" width="480" height="10" fill="#2A1D14"/>
+
+            <!-- books -->
+            <rect x="70" y="292" width="120" height="20" rx="4" fill="#2563EB"/>
+            <rect x="80" y="272" width="100" height="20" rx="4" fill="#60A5FA"/>
+
+            <!-- plant pot -->
+            <rect x="420" y="286" width="60" height="46" rx="8" fill="#0F2A4A"/>
+            <path d="M450 286c-26-14-34-42-20-64 16 10 24 34 20 64Z" fill="#22C55E"/>
+            <path d="M450 286c22-18 26-46 10-66-14 12-18 38-10 66Z" fill="#16A34A"/>
+
+            <!-- laptop base -->
+            <path d="M150 300 L370 300 L392 328 L128 328 Z" fill="#1E293B"/>
+            <rect x="150" y="296" width="220" height="8" rx="4" fill="#334155"/>
+
+            <!-- laptop screen -->
+            <rect x="168" y="150" width="184" height="150" rx="10" fill="#0B1220" stroke="#334155" stroke-width="3"/>
+            <rect x="180" y="164" width="160" height="122" rx="4" fill="#0F172A"/>
+
+            <!-- code lines on screen -->
+            <text x="188" y="182" font-family="monospace" font-size="10" fill="#60A5FA">&lt;html&gt;</text>
+            <text x="196" y="196" font-family="monospace" font-size="10" fill="#93C5FD">&lt;head&gt;</text>
+            <text x="204" y="210" font-family="monospace" font-size="10" fill="#34D399">&lt;title&gt;Portfolio&lt;/title&gt;</text>
+            <text x="196" y="224" font-family="monospace" font-size="10" fill="#93C5FD">&lt;/head&gt;</text>
+            <text x="196" y="238" font-family="monospace" font-size="10" fill="#93C5FD">&lt;body&gt;</text>
+            <text x="204" y="252" font-family="monospace" font-size="10" fill="#FBBF24">&lt;h1&gt;Hello!&lt;/h1&gt;</text>
+            <text x="196" y="266" font-family="monospace" font-size="10" fill="#93C5FD">&lt;/body&gt;</text>
+            <text x="188" y="280" font-family="monospace" font-size="10" fill="#60A5FA">&lt;/html&gt;</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ME ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-panel">
+        <div class="about-panel__photo">
+          <div class="about-panel__photo-ring">
+            <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Portrait of Sai Hima Sindhu">
+          </div>
+        </div>
+
+        <div class="about-panel__content">
+          <h2 class="about-panel__heading">About Me</h2>
+          <p>
+           Motivated Computer Science graduate with strong skills in Python, 
+           SQL, Flask, MySQL, and web development. Experienced in building applications 
+           and analyzing data through projects including Personal Expense Tracker, 
+           Student Management System, and Diwali Sales Analysis. Completed the Infosys 
+           Springboard Virtual Internship, gaining practical knowledge in Python, 
+           data analysis, machine learning, and visualization tools. Passionate 
+           about software development, problem-solving, and continuous learning,
+            with a strong desire to start a career as a Software Engineer and contribute to innovative solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-in">Technical Skills</h2>
+
+      <div class="skills__grid fade-in">
+        {% for skill in skills %}
+        <div class="skill-item">
+          <div class="skill-circle-wrap">
+            <div class="skill-circle">
+              {% if skill.icon == 'sql' %}
+              <svg class="skill-circle__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-label="SQL logo">
+                <ellipse cx="24" cy="10" rx="16" ry="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+                <path d="M8 10v10c0 3.3 7.2 6 16 6s16-2.7 16-6V10" fill="none" stroke="#2563EB" stroke-width="2"/>
+                <path d="M8 20v10c0 3.3 7.2 6 16 6s16-2.7 16-6V20" fill="none" stroke="#2563EB" stroke-width="2"/>
+                <path d="M8 30v8c0 3.3 7.2 6 16 6s16-2.7 16-6v-8" fill="none" stroke="#2563EB" stroke-width="2"/>
+              </svg>
+              {% else %}
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ skill.icon }}/{{ skill.icon }}-original.svg"
+                   alt="{{ skill.name }} logo"
+                   class="skill-circle__icon"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ skill.icon }}/{{ skill.icon }}-plain.svg';">
+              {% endif %}
+            </div>
+          </div>
+          <span class="skill-item__name">{{ skill.name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title projects__title fade-in">Projects</h2>
+      <p class="section-subtitle projects__subtitle fade-in">Projects that showcase my technical skills and practical experience.</p>
+      <span class="projects__underline fade-in" aria-hidden="true"></span>
+
+      <div class="projects__grid">
+        {% for project in projects %}
+        <article class="project-card project-card--v2 fade-in">
+          <div class="project-card__image project-card__image--v2">
+            {% if project.illustration == 'wallet' %}
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ project.title }} illustration">
+              <rect width="400" height="220" fill="#EFF6FF"/>
+              <ellipse cx="200" cy="176" rx="150" ry="14" fill="#DBEAFE"/>
+              <rect x="70" y="70" width="260" height="110" rx="18" fill="#2563EB"/>
+              <rect x="70" y="70" width="260" height="110" rx="18" fill="none" stroke="#1D4ED8" stroke-width="3"/>
+              <path d="M70 96 L330 96" stroke="#1E3A8A" stroke-width="2" opacity="0.4"/>
+              <rect x="70" y="70" width="260" height="26" rx="18" fill="#1D4ED8"/>
+              <circle cx="255" cy="132" r="24" fill="#FBBF24" stroke="#B45309" stroke-width="2"/>
+              <circle cx="255" cy="132" r="15" fill="none" stroke="#B45309" stroke-width="1.5"/>
+              <g>
+                <rect x="96" y="118" width="86" height="52" rx="6" fill="#16A34A" stroke="#166534" stroke-width="2" transform="rotate(-6 139 144)"/>
+                <circle cx="139" cy="144" r="13" fill="#DCFCE7" stroke="#166534" stroke-width="1.5" transform="rotate(-6 139 144)"/>
+                <rect x="104" y="128" width="72" height="34" rx="5" fill="#22C55E" stroke="#166534" stroke-width="2"/>
+                <circle cx="140" cy="145" r="12" fill="#F0FDF4" stroke="#166534" stroke-width="1.5"/>
+                <text x="140" y="150" font-size="11" font-weight="700" fill="#166534" text-anchor="middle">$</text>
+              </g>
+              <rect x="150" y="150" width="120" height="10" rx="5" fill="#93C5FD"/>
+            </svg>
+            {% elif project.illustration == 'dashboard' %}
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ project.title }} illustration">
+              <rect width="400" height="220" fill="#EFF6FF"/>
+              <rect x="150" y="176" width="100" height="10" rx="4" fill="#CBD5E1"/>
+              <rect x="175" y="160" width="50" height="20" fill="#94A3B8"/>
+              <rect x="60" y="38" width="280" height="150" rx="10" fill="#0F172A"/>
+              <rect x="70" y="48" width="260" height="122" rx="4" fill="#FFFFFF"/>
+              <rect x="70" y="48" width="260" height="24" fill="#2563EB"/>
+              <circle cx="84" cy="60" r="4" fill="#FFFFFF"/>
+              <circle cx="98" cy="60" r="4" fill="#BFDBFE"/>
+              <text x="110" y="64" font-size="9" font-weight="600" fill="#FFFFFF">Student Records</text>
+              <rect x="80" y="82" width="70" height="78" rx="6" fill="#DBEAFE"/>
+              <circle cx="115" cy="104" r="14" fill="#60A5FA"/>
+              <rect x="95" y="122" width="40" height="7" rx="3" fill="#93C5FD"/>
+              <rect x="95" y="134" width="40" height="7" rx="3" fill="#93C5FD"/>
+              <rect x="95" y="146" width="26" height="7" rx="3" fill="#2563EB"/>
+              <rect x="160" y="82" width="150" height="34" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+              <rect x="170" y="92" width="60" height="8" rx="4" fill="#2563EB"/>
+              <rect x="170" y="104" width="90" height="6" rx="3" fill="#93C5FD"/>
+              <rect x="160" y="124" width="70" height="36" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+              <rect x="168" y="146" width="8" height="10" fill="#93C5FD"/>
+              <rect x="180" y="140" width="8" height="16" fill="#60A5FA"/>
+              <rect x="192" y="134" width="8" height="22" fill="#2563EB"/>
+              <rect x="204" y="142" width="8" height="14" fill="#60A5FA"/>
+              <rect x="240" y="124" width="70" height="36" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+              <text x="250" y="147" font-size="18" font-weight="700" fill="#2563EB">A+</text>
+            </svg>
+            {% else %}
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ project.title }} illustration">
+              <rect width="400" height="220" fill="#EFF6FF"/>
+              <rect x="60" y="34" width="280" height="122" rx="8" fill="#1E293B"/>
+              <rect x="68" y="42" width="264" height="98" rx="3" fill="#FFFFFF"/>
+              <path d="M40 156 L360 156 L340 178 L60 178 Z" fill="#334155"/>
+              <rect x="150" y="156" width="100" height="6" fill="#0F172A"/>
+              <rect x="78" y="52" width="120" height="16" rx="4" fill="#DBEAFE"/>
+              <rect x="78" y="98" width="70" height="34" rx="4" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+              <rect x="86" y="118" width="8" height="10" fill="#93C5FD"/>
+              <rect x="98" y="112" width="8" height="16" fill="#60A5FA"/>
+              <rect x="110" y="106" width="8" height="22" fill="#2563EB"/>
+              <rect x="122" y="114" width="8" height="14" fill="#60A5FA"/>
+              <circle cx="210" cy="112" r="26" fill="none" stroke="#DBEAFE" stroke-width="10"/>
+              <path d="M210 86 A26 26 0 0 1 233 124" fill="none" stroke="#2563EB" stroke-width="10" stroke-linecap="round"/>
+              <path d="M233 124 A26 26 0 0 1 195 133" fill="none" stroke="#7C3AED" stroke-width="10" stroke-linecap="round"/>
+              <rect x="255" y="76" width="65" height="56" rx="4" fill="#EFF6FF" stroke="#C4B5FD" stroke-width="1.5"/>
+              <polyline points="262,118 275,100 288,110 305,84 313,92" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="313" cy="92" r="4" fill="#7C3AED"/>
+            </svg>
+            {% endif %}
+          </div>
+          <div class="project-card__body project-card__body--v2">
+            <h3 class="project-card__title">{{ project.title }}</h3>
+            <p class="project-card__desc">{{ project.description }}</p>
+            <div class="project-card__divider" aria-hidden="true"></div>
+            <p class="project-card__tech-label">Technologies Used</p>
+            <div class="project-card__tech">
+              {% for t in project.tech %}
+              <span class="tech-pill tech-pill--v2"><span class="tech-pill__dot"></span>{{ t }}</span>
+              {% endfor %}
+            </div>
+            <div class="project-card__actions">
+              <a href="{{ project.github }}" class="btn btn--outline btn--outline-v2" target="_blank" rel="noopener">
+                <svg class="btn__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                GitHub Link
+              </a>
+              <a href="{{ project.demo }}" class="btn btn--demo {% if project.illustration == 'wallet' %}btn--demo-green{% elif project.illustration == 'dashboard' %}btn--demo-blue{% else %}btn--demo-purple{% endif %}" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERNSHIP ===================== -->
+  <section class="internship" id="internship">
+    <div class="container">
+      <h2 class="section-title internship__title fade-in">Internship</h2>
+      <p class="section-subtitle internship__subtitle fade-in">Professional Learning Experience</p>
+      <span class="internship__underline fade-in" aria-hidden="true"></span>
+
+      <div class="internship-card internship-card--v2 fade-in">
+        <div class="internship-card__logo-col">
+          <svg class="internship-card__logo-mark" viewBox="0 0 320 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Infosys Springboard logo">
+            <rect x="0" y="20" width="58" height="58" rx="16" fill="#2563EB"/>
+            <path d="M29 36 L44 48 L29 60 L14 48 Z" fill="#FFFFFF"/>
+            <text x="70" y="50" font-family="Poppins, sans-serif" font-size="27" font-weight="700" fill="#0F172A">Infosys</text>
+            <text x="70" y="74" font-family="Poppins, sans-serif" font-size="17" font-weight="600" fill="#2563EB" letter-spacing="1.5">SPRINGBOARD</text>
+          </svg>
+        </div>
+
+        <div class="internship-card__divider-v" aria-hidden="true"></div>
+
+        <div class="internship-card__body internship-card__body--v2">
+          <div class="internship-meta-grid">
+            <div class="internship-meta-item">
+              <span class="internship-meta-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 21V5a1.5 1.5 0 0 1 1.5-1.5h9A1.5 1.5 0 0 1 16 5v16" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 10.5h3.5A1.5 1.5 0 0 1 21 12v9" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21h17" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 7h2M7.5 10.5h2M7.5 14h2M11.5 7h2M11.5 10.5h2M11.5 14h2" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><path d="M17.5 14h1M17.5 17h1" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="internship-meta-item__text">
+                <span class="internship-meta-item__label">Company</span>
+                <span class="internship-meta-item__value">{{ internship.company }}</span>
+              </span>
+            </div>
+            <div class="internship-meta-item">
+              <span class="internship-meta-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7.5" width="18" height="12" rx="2" stroke="#2563EB" stroke-width="1.6"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/><path d="M3 12.5h18M10.5 12.5v2.4h3v-2.4" stroke="#2563EB" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="internship-meta-item__text">
+                <span class="internship-meta-item__label">Internship Type</span>
+                <span class="internship-meta-item__value">{{ internship.type }}</span>
+              </span>
+            </div>
+            <div class="internship-meta-item">
+              <span class="internship-meta-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="16" rx="2.5" stroke="#2563EB" stroke-width="1.6"/><path d="M3 9.5h18" stroke="#2563EB" stroke-width="1.6"/><path d="M7.5 3v3.5M16.5 3v3.5" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 13.2h2M11 13.2h2M14.5 13.2h2M7.5 16.6h2M11 16.6h2" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="internship-meta-item__text">
+                <span class="internship-meta-item__label">Duration</span>
+                <span class="internship-meta-item__value">{{ internship.duration }}</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="internship-card__hr" aria-hidden="true"></div>
+
+          <p class="internship-card__desc internship-card__desc--v2">{{ internship.description }}</p>
+
+          <div class="internship-card__hr" aria-hidden="true"></div>
+
+          <h4 class="internship-card__skills-heading">
+            <svg class="internship-card__skills-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5l2.35 4.9 5.4.68-3.95 3.72.98 5.38L12 14.7l-4.78 2.48.98-5.38-3.95-3.72 5.4-.68L12 2.5Z" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Skills Acquired
+          </h4>
+          <div class="internship-card__skills internship-card__skills--v2">
+            {% for skill in internship.skills %}
+            <span class="skill-pill skill-pill--v2"><span class="skill-pill__dot"></span>{{ skill }}</span>
+            {% endfor %}
+          </div>
+
+          <a href="{{ internship.certificate_url }}" class="btn btn--primary btn--certificate" target="_blank" rel="noopener">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="9.5" r="6" stroke="#FFFFFF" stroke-width="1.6"/><path d="M9 14.8 7.5 21l4.5-2.4 4.5 2.4-1.5-6.2" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.3 9.5l1.8 1.8 3.6-3.8" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="eyebrow fade-in">Get In Touch</p>
+      <h2 class="section-title fade-in">Let's Connect</h2>
+
+      <div class="contact__grid fade-in">
+        <div class="contact__info">
+          <a href="mailto:sindhukancherla2003@gamil.com" class="contact__item">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Z" stroke="#2563EB" stroke-width="1.6"/><path d="m4 6 8 6 8-6" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <strong>Email</strong>
+              <small>sindhukancherla2003@gmail.com</small>
+            </span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sai-hima-sindhu-kancherla-962531316" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#2563EB" stroke-width="1.6"/><path d="M7.5 10.5v6M7.5 7.75v.01M11.5 16.5v-3.6c0-1.2.9-2.1 2-2.1s2 .9 2 2.1v3.6" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span>
+              <strong>LinkedIn</strong>
+              <small>https://www.linkedin.com/in/sai-hima-sindhu-kancherla-962531316</small>
+            </span>
+          </a>
+
+          <a href="https://github.com/SaiHimaSindhu/" class="contact__item" target="_blank" rel="noopener">
+            <span class="contact__icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" stroke="#2563EB" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <strong>GitHub</strong>
+              <small>https://github.com/SaiHimaSindhu/</small>
+            </span>
+          </a>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" id="formSubmit">
+            <span>Send Message</span>
+          </button>
+          <!--<a
+            href="mailto:sindhukancherla2003S@gmail.com?subject=Portfolio Contact"
+                  class="btn btn--primary btn--block">
+
+            <span>Send Email</span>
+
+          </a>-->
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <p class="footer__logo">Sai Hima Sindhu<span class="dot">.</span></p>
+      <p class="footer__copy">&copy; 2026 Sai Hima Sindhu. Built with Flask, HTML, CSS &amp; JavaScript.</p>
+    </div>
+
+    <nav class="footer__links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Technical Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#internship">Internship</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="mailto:saihimasindhu@example.com" aria-label="Email" class="footer__social-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 6 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/saihimasindhu" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer__social-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 10.5v6M7.5 7.75v.01M11.5 16.5v-3.6c0-1.2.9-2.1 2-2.1s2 .9 2 2.1v3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </a>
+      <a href="https://github.com/saihimasindhu" target="_blank" rel="noopener" aria-label="GitHub" class="footer__social-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.__TYPING_ROLES__ = {{ typing_roles | tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
