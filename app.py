@@ -16,6 +16,7 @@ SKILLS = [
     {"name": "CSS3", "icon": "css3"},
     {"name": "JavaScript", "icon": "javascript"},
     {"name": "Flask", "icon": "flask"},
+    {"name": "Django", "icon": "django"},
     {"name": "MySQL", "icon": "mysql"},
     {"name": "SQL", "icon": "sql"},
     {"name": "SQLite", "icon": "sqlite"},
@@ -31,7 +32,7 @@ PROJECTS = [
         "title": "Personal Expense Tracker",
         "description": "A web application for managing daily expenses with full CRUD "
                        "functionality, category management, and expense tracking.",
-        "tech": ["Python", "Flask", "HTML", "CSS", "SQLite", "SQL"],
+        "tech": ["Python", "Flask", "HTML", "CSS", "SQLite"],
         "github": "https://github.com/SaiHimaSindhu/Personal-Expense-Tracker",
         "demo": "https://personal-expense-tracker-4519.onrender.com/",
         "illustration": "wallet",
@@ -41,7 +42,7 @@ PROJECTS = [
         "description": "A database application to manage student records — adding, "
                        "updating, deleting, and searching student information using "
                        "Python and MySQL.",
-        "tech": ["Python", "MySQL", "SQL"],
+        "tech": ["Python", "MySQL", "HTML","CSS","Django"],
         "github": "https://github.com/SaiHimaSindhu/Student_Management_System",
         "demo": "#",
         "illustration": "dashboard",
