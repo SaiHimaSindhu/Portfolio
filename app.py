@@ -44,7 +44,7 @@ PROJECTS = [
                        "Python and MySQL.",
         "tech": ["Python", "MySQL", "HTML","CSS","Django"],
         "github": "https://github.com/SaiHimaSindhu/Student_Management_System",
-        "demo": "#",
+        "demo": "https://student-management-system-inky-rho.vercel.app/",
         "illustration": "dashboard",
     },
     {
