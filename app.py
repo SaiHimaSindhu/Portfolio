@@ -125,6 +125,8 @@ def contact():
     sender_email = os.environ.get("EMAIL_USER")
     app_password = os.environ.get("EMAIL_PASSWORD")
 
+    EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
     sender_email = "sindhukancherla2003@gmail.com"
     
 
