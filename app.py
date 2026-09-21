@@ -34,7 +34,7 @@ PROJECTS = [
                        "functionality, category management, and expense tracking.",
         "tech": ["Python", "Flask", "HTML", "CSS", "SQLite"],
         "github": "https://github.com/SaiHimaSindhu/Personal-Expense-Tracker",
-        "demo": "https://personal-expense-tracker-4519.onrender.com/",
+        "demo": "https://personal-expense-tracker-hazel-three.vercel.app/",
         "illustration": "wallet",
     },
     {
